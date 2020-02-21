@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+    height: 100vh;
+    width: 100%;
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat';
+    padding-top: 50px;
+}
+#app h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.line {
+    width: 300px;
+    height: 3px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.boxes {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 100px;
+    display: flex;
+}
+.theBox {
+    width: 25%;
+    padding: 0 15px;
+}
+.box {
+    box-shadow: 2px 5px 10px #4834d4;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #444;
+}
+
+.box .waktu {
+    margin-bottom: 20px;
+}
