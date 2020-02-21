@@ -1,5 +1,5 @@
 # Countdown.js
-A simple countdown for islamic prayers time
+A simple countdown class
 
 ## How to use 
 ```javascript
