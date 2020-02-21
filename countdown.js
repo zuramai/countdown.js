@@ -27,16 +27,16 @@ class Countdown {
         }, 1000);
         // console.log(now)
     }
-    getDay() {
+    getRemainingDay() {
         return this.daysLeft;
     }
-    getHours() {
+    getRemainingHours() {
         return this.hoursLeft;
     }
-    getMinutes() {
+    getRemainingMinutes() {
         return this.minutesLeft;
     }
-    getSeconds() {
+    getRemainingSeconds() {
         return this.secondsLeft;
     }
     

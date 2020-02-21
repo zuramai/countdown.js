@@ -6,7 +6,7 @@ let sholatSetelahIni = document.getElementById('sholat')
 
 // change time here
 let subuhTime = today+" 04:30:00"
-let zuhurTime = today+" 07:32:00"
+let zuhurTime = today+" 12:30:00"
 let asharTime = today+" 15:20:00"
 let maghribTime = today+" 18:05:00"
 let isyaTime = today+" 19:20:00"
@@ -27,36 +27,35 @@ setInterval(() => {
     let dayLeft, hourLeft, minuteLeft, secondLeft;
     
     if(now > new Date(subuhTime).getTime() && now < new Date(zuhurTime).getTime()) {
-        console.log(now, new Date(zuhurTime).getTime())
         sholat.innerHTML = "ZUHUR"
-        dayLeft = countDownZuhur.getDay();
-        hourLeft = countDownZuhur.getHours();
-        minuteLeft = countDownZuhur.getMinutes();
-        secondLeft = countDownZuhur.getSeconds();
+        dayLeft = countDownZuhur.getRemainingDay();
+        hourLeft = countDownZuhur.getRemainingHours();
+        minuteLeft = countDownZuhur.getRemainingMinutes();
+        secondLeft = countDownZuhur.getRemainingSeconds();
     }else if(now >= new Date(zuhurTime).getTime() && now < new Date(asharTime).getTime()) {
         sholat.innerHTML = "ASHAR"
-        dayLeft = countDownAshar.getDay();
-        hourLeft = countDownAshar.getHours();
-        minuteLeft = countDownAshar.getMinutes();
-        secondLeft = countDownAshar.getSeconds();
+        dayLeft = countDownAshar.getRemainingDay();
+        hourLeft = countDownAshar.getRemainingHours();
+        minuteLeft = countDownAshar.getRemainingMinutes();
+        secondLeft = countDownAshar.getRemainingSeconds();
     }else if(now >= new Date(asharTime).getTime() && now < new Date(maghribTime).getTime()) {
         sholat.innerHTML = "MAGHRIB"
-        dayLeft = countDownMaghrib.getDay();
-        hourLeft = countDownMaghrib.getHours();
-        minuteLeft = countDownMaghrib.getMinutes();
-        secondLeft = countDownMaghrib.getSeconds();
+        dayLeft = countDownMaghrib.getRemainingDay();
+        hourLeft = countDownMaghrib.getRemainingHours();
+        minuteLeft = countDownMaghrib.getRemainingMinutes();
+        secondLeft = countDownMaghrib.getRemainingSeconds();
     }else if(now >= new Date(maghribTime).getTime() && now < new Date(isyaTime).getTime()) {
         sholat.innerHTML = "ISYA"
-        dayLeft = countDownIsya.getDay();
-        hourLeft = countDownIsya.getHours();
-        minuteLeft = countDownIsya.getMinutes();
-        secondLeft = countDownIsya.getSeconds();
+        dayLeft = countDownIsya.getRemainingDay();
+        hourLeft = countDownIsya.getRemainingHours();
+        minuteLeft = countDownIsya.getRemainingMinutes();
+        secondLeft = countDownIsya.getRemainingSeconds();
     }else if(now > new Date(isyaTime).getTime()) {
         sholat.innerHTML = "SUBUH"
-        dayLeft = countDownZuhur.getDay();
-        hourLeft = countDownZuhur.getHours();
-        minuteLeft = countDownZuhur.getMinutes();
-        secondLeft = countDownZuhur.getSeconds();
+        dayLeft = countDownZuhur.getRemainingDay();
+        hourLeft = countDownZuhur.getRemainingHours();
+        minuteLeft = countDownZuhur.getRemainingMinutes();
+        secondLeft = countDownZuhur.getRemainingSeconds();
     }
 
     
@@ -71,10 +70,10 @@ setInterval(() => {
     hour.innerHTML = hourLeft
     minute.innerHTML = minuteLeft
     second.innerHTML = secondLeft;
-     todayDate = new Date();
-     today = todayDate.getFullYear() + "-" + (todayDate.getMonth() + 1) + "-" + todayDate.getDate();
-     now = todayDate.getTime();
+    
+    todayDate = new Date();
+    today = todayDate.getFullYear() + "-" + (todayDate.getMonth() + 1) + "-" + todayDate.getDate();
+    now = todayDate.getTime();
 
 
-    // console.log(dayLeft,hourLeft,minuteLeft,secondLeft)
 }, 1000);

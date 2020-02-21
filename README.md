@@ -9,10 +9,10 @@ countDownMaghrib.until(maghribTime);
 Then you can get day, hours, minutes and seconds left
 
 ```javascript
-dayLeft = countDownMaghrib.getDay(); // 00
-hourLeft = countDownMaghrib.getHours(); // 3 
-minuteLeft = countDownMaghrib.getMinutes(); // 25
-secondLeft = countDownMaghrib.getSeconds(); // 01
+dayLeft = countDownMaghrib.getRemainingDay(); // 00
+hourLeft = countDownMaghrib.getRemainingHours(); // 3 
+minuteLeft = countDownMaghrib.getRemainingMinutes(); // 25
+secondLeft = countDownMaghrib.getRemainingSeconds(); // 01
 ```
 
 You can check the example provided
