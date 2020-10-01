@@ -1,7 +1,5 @@
 class Countdown {
     constructor() {
-        this.untilTime = 0;
-        this.currentTime = 0;
         this.daysLeft = 0;
         this.hoursLeft = 0;
         this.minutesLeft = 0;
@@ -25,7 +23,6 @@ class Countdown {
             this.minutesLeft = minutes;
             this.secondsLeft = seconds;
         }, 1000);
-        // console.log(now)
     }
     getRemainingDay() {
         return this.daysLeft;
